@@ -7,7 +7,7 @@
 $(document).ready(function() {
 
       var city ="";
-          $.getJSON('http://ipinfo.io/json', function(data){
+          $.getJSON('https://ipinfo.io/json', function(data){
             //console.log( data.city);
             city = data.city+ ', '+ data.country;
             getWeather(city);
