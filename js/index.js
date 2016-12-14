@@ -1,4 +1,8 @@
- 
+// User Story: I can see the weather in my current location.
+
+// User Story: I can see a different icon or background image (e.g. snowy mountain, hot desert) depending on the weather.
+
+// User Story: I can push a button to toggle between Fahrenheit and Celsius.
 
 $(document).ready(function() {
 
@@ -7,15 +11,15 @@ $(document).ready(function() {
             //console.log( data.city);
             city = data.city+ ', '+ data.country;
             getWeather(city);
-            
-          });             
-       
- 
-      
+
+          });
+
+
+
   function getWeather(x){
         var city = x;
         var today = new Date();
-        
+
         var temp = 0;
         var description = "";
         var wind = "";
@@ -25,11 +29,11 @@ $(document).ready(function() {
         var country = "";
         var deg = 0;
         var pressure = 0;
-        
+
         var url = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&type=accurate&APPID=13661ad5a31e7cd905896f5f27fca3ad";
         $.getJSON(url, function(data) {
           //console.log(data);
-          
+
           city = data.name + ", " + data.sys.country;
           temp = parseInt(((data.main.temp - 273.15) * 9 / 5) + 32);
           description = data.weather[0].description;
@@ -86,5 +90,5 @@ $(document).ready(function() {
             $("#temp").text(Math.round(temp));
           }
         });
-  }   
+  }
 });
