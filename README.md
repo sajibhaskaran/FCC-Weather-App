@@ -1,6 +1,13 @@
 # Local Weather App
 
-You can find this one at http://codepen.io/sajman/pen/aNvxbY.
+### Demo:
+
+Github: https://sajibhaskaran.github.io/FCC-Weather-App/
+Codepen:  http://codepen.io/sajman/pen/aNvxbY.
+
+### Objective:
+
+Build a CodePen.io app that is functionally similar to a weather app.
 
 ### User Stories:
 
